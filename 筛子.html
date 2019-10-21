@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width"/>
+			<script src="01B-2/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			@keyframes rotate{
+				0%{
+					transform:rotateX(0deg) rotateY(0deg) rotatez(0deg);
+				}
+				100%{
+					transform:rotateX(10deg) rotateY(900deg) rotatez(90deg);
+
+				}
+			}
+			body{
+				transform-style: preserve-3d;  	
+				perspective: 1000px;
+				
+			}
+			#box{
+				width: 100px;
+				height: 70px;
+				box-sizing: border-box;
+				display: flex;
+				position: relative;
+				margin-top: 200px;
+				margin-left: 500px;
+				transform-style: preserve-3d;  	
+				perspective: 1000px;
+				transform:rotateX(-30deg) rotateY(-30deg);
+				transition: all 1s;
+
+				#box>div:hover{
+					transform:rotateX(-1080deg) rotateY(-1080deg);
+				}
+			}
+			#box>div{
+					width: 70px;
+				height: 70px;
+				border: 1px solid;
+				border-radius:12px ;
+				box-sizing: border-box;
+				display: flex;
+				flex-wrap: wrap;
+				align-items:center;
+				 justify-content:space-around;
+				 position: absolute;
+				 background: #fff;
+				 opacity: 0.9;
+			}
+			p{
+				margin: 0;
+				padding: 0;
+				width: 20px;
+				height: 20px;
+				border-radius:50%;
+				background: #008000;
+			}
+			#p1{
+				margin-left:16px;
+				margin-right: 16px;
+				
+			}
+			#div6{
+				transform:translateZ(-70px);
+			}
+			#div2{
+				transform-origin: top ;
+			transform: rotateX(-90deg);
+
+			}
+			#div4{
+					transform-origin: bottom ;
+				transform: rotateX(90deg);
+			}
+			#div3{
+			transform-origin:left ;
+			transform: rotateY(90deg);
+			}
+			#div5{
+				transform-origin:right ;
+				transform: rotateY(-90deg);
+			}
+			
+
+		</style>
+	</head>
+	<body>
+		<div id="box" >
+			<div id="div1">
+				<p></p>
+			</div>
+			<div id="div2" >
+				<p></p>
+				<p></p>
+			</div>
+			<div id="div3" >
+				<p style="align-self:flex-start; "></p>
+				<p style=" align-self:center;"></p>
+				<p style="align-self:flex-end; "></p>
+			</div>
+			<div id="div4">
+				<p style="margin-left: 4px;"></p>
+				<p style="margin-left: 9px;"></p>
+				<br>
+				<p></p>
+				<p></p>
+			</div>
+			<div id="div5" >
+				<p ></p>
+				<p ></p>
+				<p id="p1"></p>
+				<p ></p>
+				<p></p>
+			</div>
+			<div id="div6" style="flex-direction: column;justify-content:space-around; align-items: center; ">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+	</body>
+</html>
